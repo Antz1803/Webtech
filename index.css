@@ -1,0 +1,134 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.Sidebar{
+    background-color: aquamarine;
+    width: 320px;
+    height: 969px;
+}
+
+
+.Navigation{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    z-index: 1;
+}
+
+b{
+    position: relative;
+    line-height: 64px;
+    left: 15px;
+    top: 350px;
+}
+.bak1{
+    position: absolute;
+    float: right;
+    top:357px;
+    background-color: burlywood;
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak2{
+    position: absolute;
+    float: right;
+    top:420px;
+    background-color: burlywood;
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak3{
+    position: absolute;
+    float: right;
+    top:485px;
+    background-color: burlywood;
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak4{
+    position: absolute;
+    float: right;
+    top:549px;
+    background-color: burlywood;
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak5{
+    position: absolute;
+    float: right;
+    top:611px;
+    background-color: burlywood;
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+
+.bak1:hover{
+    position: absolute;
+    float: right;
+    top:357px;
+    background-color: rgba(218, 130, 16, 0.952);
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+
+.bak2:hover{
+    position: absolute;
+    float: right;
+    top:420px;
+    background-color: rgba(218, 130, 16, 0.952);
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak3:hover{
+    position: absolute;
+    float: right;
+    top:485px;
+    background-color: rgba(218, 130, 16, 0.952);
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak4:hover{
+    position: absolute;
+    float: right;
+    top:549px;
+    background-color: rgba(218, 130, 16, 0.952);
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+.bak5:hover{
+    position: absolute;
+    float: right;
+    top:611px;
+    background-color: rgba(218, 130, 16, 0.952);
+    transition: 1s;
+    height: 50px;
+    width: 320px;
+    z-index: 0;
+}
+
