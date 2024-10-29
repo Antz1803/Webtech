@@ -4,24 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css"/>
-    <title>Webtech Final</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>Stylish Sidebar</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+    background-color: #118ab2; /* Dark background */
+    width: 250px; /* Fixed width */
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed position */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    color: #ecf0f1; /* Light text color */
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.nav-item {
+    position: relative; /* For positioning the background */
+    top: 300px;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px; /* Padding for links */
+    color: #ecf0f1; /* Light text color */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.bak {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0; 
+    height: 100%; /* Full height */
+    background-color: #073b4c; /* Light green background */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth opacity transition */
+}
+
+.nav-item:hover .bak {
+    opacity: 1; /* Show background on hover */
+}
+
+.nav-item:hover .nav-link {
+    color: #27ae60; /* Change link color on hover */
+}
+    </style>
 </head>
 <body>
-    <div class="Sidebar">
-          <div class="Navigation">
-                <a href=""><b>HOME</b></a>
-                <a href=""><b>SCHOOL OBJECTIVES</b></a>
-                <a href=""><b>SCHOOL DEPARTMENT</b></a>
-                <a href=""><b>GAME</b></a>
-                <a href=""><b>ABOUT US</b></a>
-          </div>
+    <div class="sidebar">
+        <div class="logo">My Website</div>
+        <nav class="navigation">
+            <div class="nav-item">
+                <a href="#" class="nav-link"><b>HOME</b></a>
+                <div class="bak"></div>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link"><b>SCHOOL OBJECTIVES</b></a>
+                <div class="bak"></div>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link"><b>SCHOOL DEPARTMENT</b></a>
+                <div class="bak"></div>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link"><b>GAME</b></a>
+                <div class="bak"></div>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link"><b>ABOUT US</b></a>
+                <div class="bak"></div>
+            </div>
+        </nav>
     </div>
-    <div class="bak1"></div>
-    <div class="bak2"></div>
-    <div class="bak3"></div>
-    <div class="bak4"></div>
-    <div class="bak5"></div>
 
 </body>
 </html>
