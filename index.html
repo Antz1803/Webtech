@@ -8,72 +8,115 @@
     <title>Stylish Sidebar</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            transition: margin-left 0.3s; /* Smooth transition for body margin */
+        }
 
-.sidebar {
-    background-color: #118ab2; /* Dark background */
-    width: 250px; /* Fixed width */
-    height: 100vh; /* Full height */
-    position: fixed; /* Fixed position */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .sidebar {
+            background-color: #118ab2; /* Dark background */
+            width: 250px; /* Fixed width */
+            height: 100vh; /* Full height */
+            position: fixed; /* Fixed position */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            left: -250px; /* Initially hidden off-screen */
+            transition: left 0.3s; /* Smooth transition for sidebar */
+        }
 
-.logo {
-    color: #ecf0f1; /* Light text color */
-    font-size: 24px;
-    margin: 20px 0;
-}
+        .sidebar.active {
+            left: 0; /* Show sidebar when active */
+        }
 
-.navigation {
-    width: 100%;
-}
+        .logo {
+            position: relative;
+            color: #ecf0f1; /* Light text color */
+            width: 230px;
+            top: 33px;
+        }
 
-.nav-item {
-    position: relative; /* For positioning the background */
-    top: 300px;
-}
+        .navigation {
+            position: relative;
+            width: 100%;
+            top: 196px;
+        }
 
-.nav-link {
-    display: block;
-    padding: 15px 20px; /* Padding for links */
-    color: #ecf0f1; /* Light text color */
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s; /* Smooth color transition */
-}
+        .nav-item {
+            position: relative; /* For positioning the background */
+            width: 100%; /* Ensure full width for each item */
+        }
 
-.bak {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top:0; 
-    height: 100%; /* Full height */
-    background-color: #073b4c; /* Light green background */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s; /* Smooth opacity transition */
-}
+        .nav-link {
+            display: block;
+            padding: 15px 20px; /* Padding for links */
+            color: #ecf0f1; /* Light text color */
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s, background-color 0.3s; /* Smooth color transition */
+        }
 
-.nav-item:hover .bak {
-    opacity: 1; /* Show background on hover */
-}
+        .bak {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0; 
+            height: 100%; /* Full height */
+            background-color: #073b4c; /* Darker background on hover */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s; /* Smooth opacity transition */
+            z-index: -10;
+        }
 
-.nav-item:hover .nav-link {
-    color: #27ae60; /* Change link color on hover */
-}
+        .nav-item:hover .bak {
+            opacity: 1; /* Show background on hover */
+        }
+
+        .nav-item:hover .nav-link {
+            color: white; /* Change link color on hover */
+        }
+        
+        .nav-link b {
+            transition: color 0.3s; /* Smooth transition for bold text */
+        }
+        
+        .nav-item:hover .nav-link b {
+            color: #caa201; /* Change bold text color on hover for emphasis */
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 20px;
+            left: 5px;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it is above other elements */
+        }
+
+        .bar {
+            display: block;
+            width: 30px;
+            height: 4px;
+            margin-bottom: 5px;
+            background-color: #118ab2; /* Hamburger bar color */
+            transition: 3s;
+        }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">My Website</div>
+    <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <div class="sidebar" id="sidebar">
+        <img src="logo.png" class="logo"/>
         <nav class="navigation">
             <div class="nav-item">
                 <a href="#" class="nav-link"><b>HOME</b></a>
@@ -84,7 +127,7 @@ body {
                 <div class="bak"></div>
             </div>
             <div class="nav-item">
-                <a href="#" class="nav-link"><b>SCHOOL DEPARTMENT</b></a>
+                <a href="#COURSE.html" class="nav-link"><b>SCHOOL DEPARTMENT</b></a>
                 <div class="bak"></div>
             </div>
             <div class="nav-item">
@@ -97,6 +140,20 @@ body {
             </div>
         </nav>
     </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+    
+        hamburger.addEventListener('click', () => {
+           sidebar.classList.toggle('active'); // Toggle the sidebar visibility
+           if (sidebar.classList.contains('active')) {
+               hamburger.style.left = '250px'; // Move hamburger icon when sidebar is open
+           } else {
+               hamburger.style.left = '5px'; // Reset hamburger icon position
+           }
+       });
+    </script>
 
 </body>
 </html>
