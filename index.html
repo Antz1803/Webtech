@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <title>Stylish Sidebar with About Us Carousel</title>
+    <title>Stylish Sidebar with Navigation Panels</title>
     <style>
         * {
             margin: 0;
@@ -15,29 +15,29 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4; /* Light background for contrast */
-            transition: margin-left 0.3s; /* Smooth transition for body margin */
+            background-color: #f4f4f4;
+            transition: margin-left 0.3s;
         }
 
         .sidebar {
-            background-color: #118ab2; /* Dark background */
-            width: 250px; /* Fixed width */
-            height: 100vh; /* Full height */
-            position: fixed; /* Fixed position */
+            background-color: #118ab2;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
             display: flex;
             flex-direction: column;
             align-items: center;
-            left: -250px; /* Initially hidden off-screen */
-            transition: left 0.3s; /* Smooth transition for sidebar */
+            left: -250px;
+            transition: left 0.3s;
         }
 
         .sidebar.active {
-            left: 0; /* Show sidebar when active */
+            left: 0;
         }
 
         .logo {
             position: relative;
-            color: #ecf0f1; /* Light text color */
+            color: #ecf0f1;
             width: 230px;
             top: 33px;
         }
@@ -49,45 +49,45 @@
         }
 
         .nav-item {
-            position: relative; /* For positioning the background */
-            width: 100%; /* Ensure full width for each item */
+            position: relative;
+            width: 100%;
         }
 
         .nav-link {
             display: block;
-            padding: 15px 20px; /* Padding for links */
-            color: #ecf0f1; /* Light text color */
+            padding: 15px 20px;
+            color: #ecf0f1;
             text-decoration: none;
             font-size: 18px;
-            transition: color 0.3s, background-color 0.3s; /* Smooth color transition */
+            transition: color 0.3s, background-color 0.3s;
         }
 
         .bak {
             position: absolute;
             left: 0;
             right: 0;
-            top: 0; 
-            height: 100%; /* Full height */
-            background-color: #073b4c; /* Darker background on hover */
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s; /* Smooth opacity transition */
+            top: 0;
+            height: 100%;
+            background-color: #073b4c;
+            opacity: 0;
+            transition: opacity 0.3s;
             z-index: -10;
         }
 
         .nav-item:hover .bak {
-            opacity: 1; /* Show background on hover */
+            opacity: 1;
         }
 
         .nav-item:hover .nav-link {
-            color: white; /* Change link color on hover */
+            color: white;
         }
 
         .nav-link b {
-            transition: color 0.3s; /* Smooth transition for bold text */
+            transition: color 0.3s;
         }
 
         .nav-item:hover .nav-link b {
-            color: #caa201; /* Change bold text color on hover for emphasis */
+            color: #caa201;
         }
 
         .hamburger {
@@ -95,7 +95,7 @@
             top: 20px;
             left: 5px;
             cursor: pointer;
-            z-index: 1000; /* Ensure it is above other elements */
+            z-index: 1000;
         }
 
         .bar {
@@ -103,8 +103,8 @@
             width: 30px;
             height: 4px;
             margin-bottom: 5px;
-            background-color: #118ab2; /* Hamburger bar color */
-            transition: 3s;
+            background-color: #118ab2;
+            transition: 0.3s;
         }
 
         /* Content panels */
@@ -122,144 +122,17 @@
         .content-panel.active {
             display: block; /* Show the active panel */
         }
-
-        /* Carousel Styling */
-        .container {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-            background: #f5f5f5;
-            box-shadow: 0 30px 50px #dbdbdb;
-        }
-
-        .slide {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .slide .item {
-            width: 200px;
-            height: 300px;
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-            border-radius: 20px;
-            box-shadow: 0 30px 50px #505050;
-            background-position: 50% 50%;
-            background-size: cover;
-            display: inline-block;
-            transition: 0.5s;
-        }
-
-        .slide .item:nth-child(1),
-        .slide .item:nth-child(2) {
-            top: 0;
-            left: 0;
-            transform: translate(0, 0);
-            border-radius: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide .item:nth-child(3) {
-            left: 50%;
-        }
-
-        .slide .item:nth-child(4) {
-            left: calc(50% + 220px);
-        }
-
-        .slide .item:nth-child(n+5) {
-            left: calc(50% + 440px);
-            opacity: 0;
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 100px;
-            width: 300px;
-            text-align: left;
-            color: #eee;
-            transform: translate(0, -50%);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            display: none;
-        }
-
-        .slide .item:nth-child(2) .content {
-            display: block;
-        }
-
-        .content .name {
-            font-size: 40px;
-            text-transform: uppercase;
-            font-weight: bold;
-            opacity: 0;
-            animation: animate 1s ease-in-out 1 forwards;
-        }
-
-        .content .des {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: animate 1s ease-in-out 0.3s 1 forwards;
-        }
-
-        .content button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            opacity: 0;
-            animation: animate 1s ease-in-out 0.6s 1 forwards;
-        }
-
-        .button {
-            width: 100%;
-            text-align: center;
-            position: absolute;
-            bottom: 20px;
-        }
-
-        .button button {
-            width: 40px;
-            height: 35px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            margin: 0 5px;
-            border: 1px solid #000;
-            transition: 0.3s;
-        }
-
-        .button button:hover {
-            background: #abababab;
-            color: #fff;
-        }
-
-        @keyframes animate {
-            from {
-                opacity: 0;
-                transform: translate(0, 100px);
-                filter: blur(33px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate(0);
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- Hamburger Icon -->
     <div class="hamburger" id="hamburger">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
     
+    <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
         <img src="logo.png" class="logo"/>
         <nav class="navigation">
@@ -292,94 +165,49 @@
         <p>Welcome to the Home page.</p>
     </div>
     <div id="objectives-panel" class="content-panel">
-        <h2>Objectives</h2>
-        <p>Details of the school's objectives.</p>
+        <h2>School Objectives</h2>
+        <p>Here are the school's objectives.</p>
     </div>
     <div id="department-panel" class="content-panel">
-        <h2>Department</h2>
-        <p>Information about the departments.</p>
+        <h2>School Department</h2>
+        <p>Information about the school departments.</p>
     </div>
     <div id="game-panel" class="content-panel">
         <h2>Game</h2>
-        <p>Details about the game.</p>
+        <p>Explore games and activities here.</p>
     </div>
     <div id="about-panel" class="content-panel">
-        <div class="container">
-            <div class="slide">
-                <div class="item" style="background-image: url('Image/Image1.jpg');">
-                    <div class="content">
-                        <div class="name">Alver Crisben Lasit</div>
-                        <div class="des">Lorem ipsum dolor sit amet...</div>
-                        <button>See more</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('Image/Image2.jpg');">
-                    <div class="content">
-                        <div class="name">Jeorge Rey Mancilla</div>
-                        <div class="des">Lorem ipsum dolor sit amet...</div>
-                        <button>See more</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('Image/Image3.jpg');">
-                    <div class="content">
-                        <div class="name">Hannah</div>
-                        <div class="des">Lorem ipsum dolor sit amet...</div>
-                        <button>See more</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('Image/Image4.jpg');">
-                    <div class="content">
-                        <div class="name">Perater</div>
-                        <div class="des">Lorem ipsum dolor sit amet...</div>
-                        <button>See more</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('Image/Image5.jpg');">
-                    <div class="content">
-                        <div class="name">Manubag</div>
-                        <div class="des">Lorem ipsum dolor sit amet...</div>
-                        <button>See more</button>
-                    </div>
-                </div>
-            </div>
-            <div class="button">
-                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </div>
+        <h2>About Us</h2>
+        <p>Learn more about us.</p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
     <script>
-        let next = document.querySelector('.next');
-        let prev = document.querySelector('.prev');
-
-        next.addEventListener('click', function() {
-            let items = document.querySelectorAll('.item');
-            document.querySelector('.slide').appendChild(items[0]);
-        });
-
-        prev.addEventListener('click', function() {
-            let items = document.querySelectorAll('.item');
-            document.querySelector('.slide').prepend(items[items.length - 1]);
-        });
-
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const panels = document.querySelectorAll('.content-panel');
 
-        hamburger.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
+        // Toggle sidebar visibility when hamburger is clicked
+        hamburger.addEventListener('click', () => {
+           sidebar.classList.toggle('active');
+           hamburger.style.left = sidebar.classList.contains('active') ? '250px' : '5px';
         });
 
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Show the corresponding content panel when a navigation link is clicked
         navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetPanel = document.getElementById(link.getAttribute('data-target'));
-                document.querySelectorAll('.content-panel').forEach(panel => {
-                    panel.classList.remove('active');
-                });
-                targetPanel.classList.add('active');
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                
+                // Hide all panels and remove active class
+                panels.forEach(panel => panel.classList.remove('active'));
+                
+                // Show the selected panel
+                const targetPanelId = link.getAttribute('data-target');
+                document.getElementById(targetPanelId).classList.add('active');
+                
+                // Hide the sidebar after selection
+                sidebar.classList.remove('active');
+                hamburger.style.left = '5px';
             });
         });
     </script>
