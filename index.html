@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="About Us.css">
     <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="GameStyle.css">
     <title>Stylish Sidebar with Navigation Panels</title>
     <style>
         * {
@@ -15,7 +19,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: whitesmoke;
             transition: margin-left 0.3s;
         }
 
@@ -112,10 +116,10 @@
             display: none; /* Hide all panels initially */
             padding: 20px;
             margin-left: 260px;
-            background-color: white;
-            border: 1px solid #ddd;
+ 
+ 
             border-radius: 4px;
-            width: calc(100% - 260px); /* Adjust width to fit next to sidebar */
+            width: calc(100% - 270px); /* Adjust width to fit next to sidebar */
             transition: opacity 0.3s;
         }
 
@@ -169,16 +173,235 @@
         <p>Here are the school's objectives.</p>
     </div>
     <div id="department-panel" class="content-panel">
-        <h2>School Department</h2>
-        <p>Information about the school departments.</p>
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h1>MULTICULTURAL COMMUNITY FOR LEARNING</h1>
+                        <p>We are a learning community dedicated to inspiring success and nurturing well-being. Finnish education excellence is at the heart of all we do, because we believe that everyone deserves the best possible future.</p>
+                        <p>— Dr. Eija Valanne, Principal</p>
+    
+                    
+                    </div>
+                    <div class="video-content">
+                        <img src="hehe.jpg" alt="Educational Environment"> 
+                    </div>
+                </div>
+            </section>
+    
+            <section id="program">
+                <h2>Programs Offered</h2>
+                <div class="course-list">
+                    <div class="program-item" onclick="openModal('modal1')">   
+                        <h3>College of Computer Studies</h3>
+                    </div>
+                    
+                    <div class="program-item" onclick="openModal('modal5')">
+                        <h3>College of Education</h3>           
+                    </div>
+                    
+                    <div class="program-item" onclick="openModal('modal4')">    
+                        <h3>College of Business and Management</h3>           
+                    </div>
+                    
+                    <div class="program-item" onclick="openModal('modal3')">   
+                        <h3>College of Nursing</h3>           
+                    </div>
+                </div>
+            </section>
+            
+            
+    
+            <!-- Modals for courses -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Bachelor of Science in Information Technology (BSIT)</h2>
+                    <p>This program develops essential IT and software development skills, preparing students for roles such as:</p>
+                    <ul>
+                        <li>Bachelor of Science in Information Technology (BSIT)</li>
+                        <li>Bachelor of Science in Computer Science (BSCS)</li>
+                        <li>Bachelor of Science in Computer Engineering (BSCPE)</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Modal for College of Nursing -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Bachelor of Science in Nursing (BSN)</h2>
+            <p>This program provides comprehensive training for a successful nursing career with a path to become:</p>
+            <ul>
+                <li>Bachelor of Science in Nursing (BSN)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal for College of Business and Management -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Bachelor of Science in Business Management (BSBM)</h2>
+            <p>This program offers a solid foundation in business, management, and entrepreneurship, preparing students for diverse career paths. Students can specialize in:</p>
+            <ul>
+                <li> Bachelor of Science in Business Administration Major in Financial Management (BSBA-FM)</li>
+                <li> Bachelor of Science in Business Administration Major in Marketing Management (BSBA-MM)</li>
+                <li>Bachelor of Science in Tourism Management (BSTM)</li>
+                <li>Bachelor of Science in Hospitality Management (BSHM) </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal for College of Education -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Bachelor of Science in Education (BSED)</h2>
+            <p>This program prepares students to become inspiring educators and mentors, equipping them for impactful roles in the education field. Possible career paths include:</p>
+            <ul>
+                <li>Bachelor of Elementary Education (BEED)</li>
+                <li>Bachelor of Secondary Education Major in English (BSED-ENGLISH)</li>
+                <li>Bachelor of Secondary Education Major in MATH (BSED-MATH)</li>
+            </ul>
+        </div>
+    </div>
+    
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Asian College of Technology</p>
+        </footer>
     </div>
     <div id="game-panel" class="content-panel">
-        <h2>Game</h2>
-        <p>Explore games and activities here.</p>
+        <div id="pageContainer">
+            <!-- Logos Section -->
+            <div id="logos">
+                <div class="logo logo1"></div>
+                <div class="logo logo2"></div>
+            </div>
+    
+            <!-- Main Content Area -->
+            <div id="content">
+                <header>
+                    <h1>Welcome to the Game Zone</h1>
+                    <p>Challenge yourself with Tic Tac Toe!</p>
+                </header>
+                
+                <!-- Game Control Buttons -->
+                <div id="gameControls">
+                    <button id="rulesButton">Game Rules</button>
+                </div>
+                
+                <section id="gameSection">
+                    <div id="title">
+                        <h2>Tic Tac Toe</h2>
+                    </div>
+    
+                    <div id="boardContainer"> <!-- New container for the board -->
+                        <div id="board">
+                            <div class="square" id="square0"></div>
+                            <div class="square" id="square1"></div>
+                            <div class="square" id="square2"></div>
+                            <div class="square" id="square3"></div>
+                            <div class="square" id="square4"></div>
+                            <div class="square" id="square5"></div>
+                            <div class="square" id="square6"></div>
+                            <div class="square" id="square7"></div>
+                            <div class="square" id="square8"></div>
+                        </div>
+                    </div>  
+    
+                    <div id="statusPanel">
+                        <p id="gameStatus">X's turn!</p>
+                        <input type="button" value="Restart" id="restartButton" onclick="restartGame()"/>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+        <!-- Game Rules Modal -->
+        <div id="rulesModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(this.parentElement.parentElement)">&times;</span>
+                <h2>Game Rules</h2>
+                <p>1. The game is played on a 3x3 grid.</p>
+                <p>2. Player X and Player O take turns marking a square.</p>
+                <p>3. The first player to get 3 of their marks in a row (vertically, horizontally, or diagonally) wins.</p>
+                <p>4. If all 9 squares are filled and no player has 3 in a row, the game is a tie.</p>
+                <button class="okButton" onclick="closeModal(this.parentElement.parentElement)">OK</button>
+            </div>
+        </div>
+    
+        <!-- Game Result Modal -->
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(this.parentElement.parentElement)">&times;</span>
+                <h2 id="resultMessage">X wins!</h2>
+                <button class="okButton" onclick="closeModal(this.parentElement.parentElement); restartGame();">OK</button>
+            </div>
+        </div>
     </div>
     <div id="about-panel" class="content-panel">
-        <h2>About Us</h2>
-        <p>Learn more about us.</p>
+        <div class="container">
+            <div class="slide">
+                <div class="item" style="background-image: url(.Images\ horje.jpg);">
+                    <div class="content">
+                        <div class="name">Alver Crisben Lasit</div>
+                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
+                        <button>See more</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/horje.jpg);">
+                    <div class="content">
+                        <div class="name">Jeorge Rey Mancilla</div>
+                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
+                        <button onclick="openModal('Info1')">See more</button>
+                    </div>
+                </div>
+                    <!-- Horje Information-->
+    <div id="Info1" class="Info">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('Info1')">&times;</span>
+            <h2>Bachelor of Science in Business Management (BSBM)</h2>
+            <p>This program offers a solid foundation in business, management, and entrepreneurship, preparing students for diverse career paths. Students can specialize in:</p>
+            <ul>
+                <li> Bachelor of Science in Business Administration Major in Financial Management (BSBA-FM)</li>
+                <li> Bachelor of Science in Business Administration Major in Marketing Management (BSBA-MM)</li>
+                <li>Bachelor of Science in Tourism Management (BSTM)</li>
+                <li>Bachelor of Science in Hospitality Management (BSHM) </li>
+            </ul>
+        </div>
+    </div>
+    
+                
+                <div class="item" style="background-image: url(./Image/Image\ 3.jpg);">
+                    <div class="content">
+                        <div class="name">Hannah</div>
+                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
+                        <button>See more</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/pers.jpg);">
+                    <div class="content">
+                        <div class="name">Perater</div>
+                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
+                        <button>See more</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./Image/Image\ 5.jpg);">
+                    <div class="content">
+                        <div class="name">Manubag</div>
+                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
+                        <button>See more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -210,6 +433,122 @@
                 hamburger.style.left = '5px';
             });
         });
+
+         //Course code
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('Info');
+            for (let modal of modals) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        }
+
+        //Game Code
+        const squares = document.querySelectorAll('.square');
+const statusDisplay = document.getElementById('gameStatus');
+const resultMessage = document.getElementById('resultMessage');
+const resultModal = document.getElementById('resultModal');
+const rulesModal = document.getElementById('rulesModal');
+
+let gameActive = true;
+let currentPlayer = 'X';
+
+squares.forEach(square => {
+    square.addEventListener('click', handleSquareClick);
+});
+
+document.getElementById('rulesButton').addEventListener('click', () => {
+    showModal(rulesModal);
+});
+
+function handleSquareClick(event) {
+    const square = event.target;
+    if (square.textContent || !gameActive) {
+        return;
+    }
+
+    square.textContent = currentPlayer;
+    checkForWinner();
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    statusDisplay.textContent = `${currentPlayer}'s turn!`;
+}
+
+function checkForWinner() {
+    const winConditions = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
+        [0, 4, 8], [2, 4, 6]             // diagonals
+    ];
+
+    for (let condition of winConditions) {
+        const [a, b, c] = condition;
+        if (squares[a].textContent && 
+            squares[a].textContent === squares[b].textContent &&
+            squares[a].textContent === squares[c].textContent) {
+            resultMessage.textContent = `${squares[a].textContent} wins!`;
+            showModal(resultModal);
+            return;
+        }
+    }
+
+    if ([...squares].every(square => square.textContent)) {
+        resultMessage.textContent = 'It\'s a tie!';
+        showModal(resultModal);
+    }
+}
+
+function showModal(modal) {
+    modal.style.display = "flex";
+    gameActive = false;
+}
+
+function closeModal(modal) {
+    modal.style.display = "none";
+    restartGame(); // Restart the game when the modal is closed
+}
+
+function restartGame() {
+    gameActive = true;
+    currentPlayer = 'X';
+    statusDisplay.textContent = `${currentPlayer}'s turn!`;
+    squares.forEach(square => {
+        square.textContent = '';
+    });
+    closeModal(resultModal); // Close the result modal if it's open
+}
+
+//About Us
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1])
+})
+
     </script>
 </body>
 </html>
