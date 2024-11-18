@@ -132,6 +132,31 @@
             transform: scale(1.03);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
+          /* Basic styles for the modal */
+          .Info {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            top:85px;
+            opacity: 90%;
+            padding: 20px;
+            height: 360px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+
     </style>
 </head>
 <body>
@@ -348,61 +373,125 @@
             </div>
         </div>
     </div>
+
+    <!--About us-->
     <div id="about-panel" class="content-panel">
         <div class="container">
             <div class="slide">
-                <div class="item" style="background-image: url(.Images\ horje.jpg);">
+                <div class="item" style="background-image: url(.Images\ );">
                     <div class="content">
                         <div class="name">Alver Crisben Lasit</div>
-                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
-                        <button>See more</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(Images/horje.jpg);">
-                    <div class="content">
-                        <div class="name">Jeorge Rey Mancilla</div>
                         <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
                         <button onclick="openModal('Info1')">See more</button>
                     </div>
                 </div>
+                    <!-- Abner Information-->
+                    <div id="Info1" class="Info">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('Info1')">&times;</span>
+                            <h2>Bachelor of Science in Information Technology</h2><br>
+                            <p>"The real problem is not whether machines think but whether men do."
+                               <br> -B.F Skinner
+                            </p><br>
+                            <ul>
+                                <li>Proficiency in Digital art in Multimedia </li>
+                                <li>Mastery in Graphics and Art</li>
+                                <li>Proficiency in photography and videography</li>
+                                <li>Mastery user interface and web design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                <div class="item" style="background-image: url(Images/horje.jpg);">
+                    <div class="content">
+                        <div class="name">Jeorge Rey Mancilla</div>
+                        <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
+                        <button onclick="openModal('Info2')">See more</button>
+                    </div>
+                </div>
                     <!-- Horje Information-->
-    <div id="Info1" class="Info">
+    <div id="Info2" class="Info">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('Info1')">&times;</span>
-            <h2>Bachelor of Science in Business Management (BSBM)</h2>
-            <p>This program offers a solid foundation in business, management, and entrepreneurship, preparing students for diverse career paths. Students can specialize in:</p>
+            <span class="close" onclick="closeModal('Info2')">&times;</span>
+            <h2>Bachelor of Science in Information Technology</h2><br>
+            <p>"Technology is best when it brings people together."
+               <br> — Matt Mullenweg</p><br>
             <ul>
-                <li> Bachelor of Science in Business Administration Major in Financial Management (BSBA-FM)</li>
-                <li> Bachelor of Science in Business Administration Major in Marketing Management (BSBA-MM)</li>
-                <li>Bachelor of Science in Tourism Management (BSTM)</li>
-                <li>Bachelor of Science in Hospitality Management (BSHM) </li>
+                <li>Proficiency in Web Development</li>
+                <li>Expertise in Mobile Application Development</li>
+                <li>Digital Solutions for Business</li>
             </ul>
         </div>
     </div>
     
                 
-                <div class="item" style="background-image: url(./Image/Image\ 3.jpg);">
+                <div class="item" style="background-image: url(Images/han.jpg);">
                     <div class="content">
                         <div class="name">Hannah</div>
                         <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
-                        <button>See more</button>
+                        <button onclick="openModal('Info3')">See more</button>
                     </div>
                 </div>
+                                    <!-- Han Information-->
+    <div id="Info3" class="Info">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('Info3')">&times;</span>
+            <h2>Bachelor of Science in Information Technology</h2><br>
+            <p>"It has become appallingly obvious that our technology has exceeded our humanity."
+                <br>  — Albert Einstein</p><br>
+            <ul>
+                <li>Expertise in Cloud Computing</li>
+                <li>Experience with Big Data Analytics</li>
+                <li>Mastery in Database Management</li>
+            </ul>
+        </div>
+    </div>
+    
                 <div class="item" style="background-image: url(Images/pers.jpg);">
                     <div class="content">
                         <div class="name">Perater</div>
                         <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
-                        <button>See more</button>
+                        <button onclick="openModal('Info4')">See more</button>
                     </div>
                 </div>
+                    <!-- Pera Information-->
+                    <div id="Info4" class="Info">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('Info4')">&times;</span>
+                            <h2>Bachelor of Science in Information Technology</h2><br>
+                            <p>"The great growling engine of change – technology."
+                                <br>  — Alvin Toffler</p><br>
+                            <ul>
+                                <li>Expertise in Artificial Intelligence</li>
+                                <li>Strong Programming and Coding Skills</li>
+                                <li>Proficiency in Data Structures</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 <div class="item" style="background-image: url(./Image/Image\ 5.jpg);">
                     <div class="content">
                         <div class="name">Manubag</div>
                         <div class="des">Lorem ipsum dolor sit amet. Ut quia repudiandae sit enim quod et vitae expedita in laudantium mollitia sed possimus eligendi est nulla quaerat sed nihil autem</div>
-                        <button>See more</button>
+                        <button onclick="openModal('Info5')">See more</button>
                     </div>
                 </div>
             </div>
+                                <!-- Nat Information-->
+    <div id="Info5" class="Info">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('Info5')">&times;</span>
+            <h2>Bachelor of Science in Information Technology</h2><br>
+            <p>"Any sufficiently advanced technology is indistinguishable from magic."
+                <br>  — Arthur C. Clarke</p><br>
+            <ul>
+                <li>Expert in Blockchain Technology</li>
+                <li>Proficiency in Cybersecurity</li>
+                <li>Specialist in IT Infrastructure</li>
+            </ul>
+        </div>
+    </div>
+    
             <div class="button">
                 <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
                 <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
@@ -451,15 +540,6 @@
 
         window.onclick = function(event) {
             const modals = document.getElementsByClassName('modal');
-            for (let modal of modals) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                }
-            }
-        }
-
-        window.onclick = function(event) {
-            const modals = document.getElementsByClassName('Info');
             for (let modal of modals) {
                 if (event.target == modal) {
                     modal.style.display = 'none';
@@ -554,6 +634,28 @@ prev.addEventListener('click', function(){
     let items = document.querySelectorAll('.item')
     document.querySelector('.slide').prepend(items[items.length - 1])
 })
+
+   // Close the modal when the user clicks anywhere outside of it
+   window.onclick = function(event) {
+        const modals = document.getElementsByClassName('Info');
+        for (let modal of modals) {
+            if (event.target == modal) {
+                closeModal(modal.id);
+            }
+        }
+    }
+
+    // Close the modal when the close button is clicked
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'none';
+    }
+
+    // Open the modal (for testing purposes)
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'block';
+    }
 
     </script>
 </body>
